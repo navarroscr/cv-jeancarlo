@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 2 - Jean Carlo Navarro Solano</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div>
+    <header>
+        <h1>Jean Carlo Navarro Solano</h1>
+        <p>Estudiante de TI</p>
+        <p> 6021-6133 &nbsp;|&nbsp;  jeancarlonavarros25@gmail.com</p>
+    </header>
+</div>
+<div>
+    <main>
+        <section>
+            <h2>Proyecto 2: Sistema de Ventas y Distribución – Nova Online</h2>
+            <p><em>Proyecto académico del curso Programación IV, Colegio Universitario de Cartago (III Cuatrimestre 2026). Equipo de 3 personas.</em></p>
+            <p><strong>Descripción:</strong> Sistema distribuido que controla inventario y ventas. Tiene tres
+                componentes que se comunican por sockets mediante tramas: un Verificador (clientes y compras),
+                un Almacén (productos, proveedores e inventario) y un Simulador con interfaz gráfica.</p>
+            <p><strong>Tecnologías del proyecto:</strong> Python, Java, C# (WinForms), MySQL, SQL Server,
+                sockets TCP, JSON, procedimientos almacenados, multihilo, Git/GitHub.</p>
+            <p><strong>Mi rol:</strong> Desarrollador backend del componente Verificador (Python + MySQL) y responsable de su base de datos.</p>
+            <a class="boton" href="https://github.com/EdgarMtZ10/ProyectoPrograIV/tree/main/ProyectoProgra4" target="_blank">Ver código en GitHub</a>
+        </section>
+
+
+        <section>
+            <h2>Lo que desarrollé</h2>
+            <ul>
+                <li>Servidor de sockets multihilo del Verificador, que atiende a cada cliente en su propio hilo.</li>
+                <li>Diseño de la base de datos MySQL (clientes, compras y detalle) y sus procedimientos almacenados.</li>
+                <li>Capa de acceso a datos, módulo de validaciones y scripts de pruebas automatizadas.</li>
+                <li>Formato JSON de las tramas usado por el Simulador e integración con los demás componentes mediante Git.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Mis historias de usuario</h2>
+            <p><strong>Mantenimiento de clientes:</strong> agregar, modificar y borrar clientes, validando
+                identificación, país (ISO), correo y teléfono. No permite borrar clientes con historial de compras.</p>
+            <p><strong>Registro de compras:</strong> antes de guardar, consulta al Almacén por socket si hay
+                inventario. La transacción (commit/rollback) se maneja en Python y un bloqueo entre hilos evita
+                compras duplicadas cuando llegan al mismo tiempo.</p>
+            <p><strong>Bitácora:</strong> registra cada trama recibida en JSON con fecha y hora, usando el patrón
+                productor-consumidor (una cola y un hilo escritor independiente).</p>
+        </section>
+
+        <section>
+            <h2>Capturas</h2>
+            <div class="galeria">
+                <img src="img/Ej1-PR2.png" alt="Captura 1 del sistema Nova Online">
+                <img src="img/Ej2-PR2.png" alt="Captura 2 del sistema Nova Online">
+                <img src="img/Ej3-PR2.png" alt="Captura 3 del sistema Nova Online">
+                <img src="img/Ej4-PR2.png" alt="Captura 4 del sistema Nova Online">
+            </div>
+        </section>
+
+        <a class="boton" href="index.html">← Volver al CV</a>
+    </main>
+</div>
+</body>
+</html>
